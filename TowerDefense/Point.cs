@@ -16,5 +16,19 @@ namespace TowerDefense
             X = x;
             Y = y;
         }
+
+        public int DistanceTo (int x, int y)
+        {
+            // First Program in smaller chunks and then refactor it like below
+            //// int xDiff = X - x;
+            //// int yDiff = Y - y;
+
+            //// int XDiffSquared = xDiff * xDiff;
+            //// int yDiffSquared = yDiff * yDiff;
+
+            //// return (int)Math.Sqrt(XDiffSquared + yDiffSquared);
+
+            return (int)Math.Sqrt(Math.Pow(X - x, 2) + Math.Pow(Y - y, 2));
+        }
     }
 }
