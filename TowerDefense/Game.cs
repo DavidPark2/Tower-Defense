@@ -7,11 +7,23 @@ namespace TowerDefense
         public static void Main()
         {
             Map map = new Map(8, 5);
-
-            Point point = new Point(4, 2);
-
-            Console.WriteLine(point.DistanceTo(5, 5));
-            Console.ReadLine();
+            try
+            {
+                MapLocation mapLocation = new MapLocation(20, 3, map);
+            }
+            catch (OutOfBoundsException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (TowerDefenseException)
+            {
+                Console.WriteLine("Unhandled TreehouseDefenseException");
+            }
+            catch(Exception)
+            {
+                Console.WriteLine("Unhandled Exception");
+                Console.ReadLine();
+            }
         }
     }
 }

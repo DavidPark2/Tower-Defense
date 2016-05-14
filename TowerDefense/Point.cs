@@ -30,5 +30,7 @@ namespace TowerDefense
 
             return (int)Math.Sqrt(Math.Pow(X - x, 2) + Math.Pow(Y - y, 2));
         }
+
+
     }
 }
